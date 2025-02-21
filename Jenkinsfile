@@ -15,14 +15,20 @@ pipeline {
                 bat 'dotnet --version'
             }
         }
+        stage('List Workspace Files') {
+            steps {
+                bat 'dir'
+            }
+        }
         stage('Restore Dependencies') {
             steps {
                 bat 'dotnet restore'
             }
         }
-        stage('Build') {
+        stage('Clean Build') {
             steps {
-                bat 'dotnet build --configuration Release'
+                bat 'dotnet clean Selenium.sln'
+                bat 'dotnet build Selenium.sln --configuration Release'
             }
         }
         stage('Run Tests') {
