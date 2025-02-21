@@ -27,8 +27,8 @@ pipeline {
         }
         stage('Clean Build') {
             steps {
-                bat 'dotnet clean Selenium.sln'
-                bat 'dotnet build Selenium.sln --configuration Release'
+                bat 'dotnet clean SeleniumIde.sln'
+                bat 'dotnet build SeleniumIde.sln --configuration Release'
             }
         }
         stage('Run Tests') {
