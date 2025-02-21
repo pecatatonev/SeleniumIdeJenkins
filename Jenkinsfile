@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/pecatatonev/SeleniumIdeJenkins'
+                git branch: 'master', url: 'https://github.com/pecatatonev/SeleniumIdeJenkins'
             }
         }
         stage('Set up .NET Core') {
