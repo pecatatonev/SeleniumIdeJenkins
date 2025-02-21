@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'dotnet build Selenium.sln --configuration Release'
+                bat 'dotnet build SeleniumIde.sln --configuration Release'
             }
         }
         stage('Run Tests') {
